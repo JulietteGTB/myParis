@@ -1,0 +1,237 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "MontserratVariable";
+  src: url(/monParis/font/Montserrat-VariableFont_wght.ttf) format("truetype");
+}
+* {
+  border: 1px solid red;
+  color: #071f32;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  font-family: "MontserratVariable", sans-serif;
+}
+html body {
+  min-height: 100%;
+  display: grid;
+  grid-template: 5rem 2fr 20rem/3fr 10fr 3fr;
+}
+
+header {
+  display: flex;
+  grid-area: 1/1/2/4;
+  flex-direction: row;
+  border: 1px solid pink;
+  height: 77px;
+  width: 100%;
+  box-shadow: 0 2px 0 0 rgba(7, 31, 50, 0.1);
+}
+header #title {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  background-color: orange;
+  fill: #071f32;
+  min-width: 12rem;
+  padding: 9px;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid purple;
+  flex-grow: 3;
+}
+header nav div {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header nav ul {
+  flex-grow: 3;
+  display: flex;
+  flex-direction: row;
+}
+header nav ul li {
+  display: flex;
+  height: 100%;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+}
+header nav ul li a {
+  border: 1px solid yellow;
+  display: flex;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+main {
+  grid-area: 2/1/3/4;
+  display: grid;
+  grid-template-columns: 3fr 10fr 3fr;
+}
+main #main-pratique {
+  display: flex;
+  flex-direction: column;
+  max-width: 31rem;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid brown;
+}
+main #main-pratique p {
+  border: 1px solid green;
+  display: block;
+}
+main #main-pratique h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+main #main-pratique a {
+  text-decoration: none;
+}
+main #main-pratique section {
+  border: 1px solid pink;
+  margin-bottom: 20px;
+}
+main #main-pratique section:nth-of-type(1) a {
+  display: inline-block;
+  flex-direction: row;
+  background-color: rgb(244, 243, 243);
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 10px 14px;
+  margin: 8px;
+}
+main #main-telex {
+  display: flex;
+  flex-direction: column;
+}
+main #main-telex svg.paris-icon {
+  height: 32px;
+  width: 32px;
+}
+main #main-telex li {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+main #main-telex li .telex-time {
+  display: flex;
+  flex-direction: column;
+  font-size: 28px;
+  font-weight: 600;
+  margin-right: 20px;
+  fill: #e22c3f;
+}
+main #main-telex li .telex-content {
+  line-height: 1.54;
+  font-size: 13px;
+}
+main #main-telex li:after {
+  background: #e22c3f;
+  bottom: 0;
+  content: "";
+  left: 0.95rem;
+  position: absolute;
+  top: 4.9rem;
+  width: 0.1rem;
+}
+
+footer {
+  grid-area: 3/1/4/4;
+  display: flex;
+  flex-direction: row;
+}
+footer #socials {
+  background-color: #071f32;
+  display: flex;
+  flex-direction: column;
+}
+footer #socials div #socials-icons {
+  display: flex;
+  flex-direction: row;
+}
+footer #socials svg {
+  height: 3.2rem;
+  width: 3.2rem;
+}
+
+a.slide-1 {
+  position: relative;
+  z-index: 1;
+  color: #e22c3f;
+  text-decoration: none;
+  transition: color 0.25s ease-in-out;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+a.slide-1::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 100%; /* this is the direction the swipe goes */
+  bottom: 0;
+  background-color: #e22c3f;
+  transition: right 0.25s ease-in-out; /* a shorter animation time on exit, adjust as you wish */
+}
+a.slide-1:hover {
+  color: white;
+  transition: color 0.5s ease-in-out;
+}
+a.slide-1:hover::after {
+  right: 0; /* this is the direction the swipe goes */
+  transition: right 0.5s ease-in-out; /* this triggers the animation */
+}
+
+/*# sourceMappingURL=index.css.map */
