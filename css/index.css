@@ -45,7 +45,6 @@ table {
   src: url(/monParis/font/Montserrat-VariableFont_wght.ttf) format("truetype");
 }
 * {
-  border: 1px solid red;
   color: #071f32;
 }
 
@@ -58,148 +57,6 @@ html body {
   min-height: 100%;
   display: grid;
   grid-template: 5rem 2fr 20rem/3fr 10fr 3fr;
-}
-
-header {
-  display: flex;
-  grid-area: 1/1/2/4;
-  flex-direction: row;
-  border: 1px solid pink;
-  height: 77px;
-  width: 100%;
-  box-shadow: 0 2px 0 0 rgba(7, 31, 50, 0.1);
-}
-header #title {
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  background-color: orange;
-  fill: #071f32;
-  min-width: 12rem;
-  padding: 9px;
-}
-header nav {
-  display: flex;
-  flex-direction: row;
-  border: 1px solid purple;
-  flex-grow: 3;
-}
-header nav div {
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-header nav ul {
-  flex-grow: 3;
-  display: flex;
-  flex-direction: row;
-}
-header nav ul li {
-  display: flex;
-  height: 100%;
-  flex-grow: 1;
-  align-items: center;
-  justify-content: center;
-}
-header nav ul li a {
-  border: 1px solid yellow;
-  display: flex;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-main {
-  grid-area: 2/1/3/4;
-  display: grid;
-  grid-template-columns: 3fr 10fr 3fr;
-}
-main #main-pratique {
-  display: flex;
-  flex-direction: column;
-  max-width: 31rem;
-  padding: 30px;
-  text-align: center;
-  border: 1px solid brown;
-}
-main #main-pratique p {
-  border: 1px solid green;
-  display: block;
-}
-main #main-pratique h2 {
-  font-size: 20px;
-  font-weight: 700;
-}
-main #main-pratique a {
-  text-decoration: none;
-}
-main #main-pratique section {
-  border: 1px solid pink;
-  margin-bottom: 20px;
-}
-main #main-pratique section:nth-of-type(1) a {
-  display: inline-block;
-  flex-direction: row;
-  background-color: rgb(244, 243, 243);
-  text-transform: uppercase;
-  font-size: 10px;
-  font-weight: 700;
-  padding: 10px 14px;
-  margin: 8px;
-}
-main #main-telex {
-  display: flex;
-  flex-direction: column;
-}
-main #main-telex svg.paris-icon {
-  height: 32px;
-  width: 32px;
-}
-main #main-telex li {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-}
-main #main-telex li .telex-time {
-  display: flex;
-  flex-direction: column;
-  font-size: 28px;
-  font-weight: 600;
-  margin-right: 20px;
-  fill: #e22c3f;
-}
-main #main-telex li .telex-content {
-  line-height: 1.54;
-  font-size: 13px;
-}
-main #main-telex li:after {
-  background: #e22c3f;
-  bottom: 0;
-  content: "";
-  left: 0.95rem;
-  position: absolute;
-  top: 4.9rem;
-  width: 0.1rem;
-}
-
-footer {
-  grid-area: 3/1/4/4;
-  display: flex;
-  flex-direction: row;
-}
-footer #socials {
-  background-color: #071f32;
-  display: flex;
-  flex-direction: column;
-}
-footer #socials div #socials-icons {
-  display: flex;
-  flex-direction: row;
-}
-footer #socials svg {
-  height: 3.2rem;
-  width: 3.2rem;
 }
 
 a.slide-1 {
@@ -220,18 +77,388 @@ a.slide-1::after {
   z-index: -1;
   top: 0;
   left: 0;
-  right: 100%; /* this is the direction the swipe goes */
+  right: 100%;
   bottom: 0;
   background-color: #e22c3f;
-  transition: right 0.25s ease-in-out; /* a shorter animation time on exit, adjust as you wish */
+  transition: right 0.25s ease-in-out;
 }
 a.slide-1:hover {
   color: white;
   transition: color 0.5s ease-in-out;
 }
 a.slide-1:hover::after {
-  right: 0; /* this is the direction the swipe goes */
-  transition: right 0.5s ease-in-out; /* this triggers the animation */
+  right: 0;
+  transition: right 0.5s ease-in-out;
+}
+
+footer #socials .try {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.25s ease-in-out;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+footer #socials .slide-1.try::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background-color: #fff;
+  transition: right 0.25s ease-in-out;
+}
+footer #socials .slide-1.try:hover {
+  color: #e22c3f;
+  transition: color 0.5s ease-in-out;
+}
+footer #socials .slide-1.try:hover::after {
+  transition: right 0.5s ease-in-out;
+}
+
+header {
+  display: flex;
+  grid-area: 1/1/2/4;
+  flex-direction: row;
+  height: 77px;
+  width: 100%;
+  border-bottom: 0.1rem solid #e8e8e8;
+  position: relative;
+}
+header h1 {
+  position: absolute;
+  z-index: -1;
+  left: 5em;
+  color: #fff;
+}
+header #title {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  fill: #071f32;
+  min-width: 12rem;
+  padding: 9px;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 3;
+}
+header nav svg.paris-icon {
+  height: 32px;
+  width: 32px;
+}
+header nav #recherche svg {
+  order: -1;
+}
+header nav #mon-compte a {
+  color: #354bcf;
+}
+header nav #mon-compte svg.paris-icon-user {
+  fill: #354bcf;
+}
+header nav div {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header nav div a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+header nav ul {
+  flex-grow: 3;
+  display: flex;
+  flex-direction: row;
+}
+header nav ul li {
+  display: flex;
+  height: 100%;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+}
+header nav ul li a {
+  display: flex;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+main {
+  grid-area: 2/1/3/4;
+  display: grid;
+  grid-template-columns: 3fr 10fr 3fr;
+}
+main #main-pratique {
+  display: flex;
+  flex-direction: column;
+  max-width: 31rem;
+  padding: 30px;
+  text-align: center;
+}
+main #main-pratique p {
+  display: block;
+}
+main #main-pratique h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+main #main-pratique a {
+  text-decoration: none;
+}
+main #main-pratique section {
+  margin-bottom: 20px;
+}
+main #main-pratique section:nth-of-type(1) a {
+  display: inline-block;
+  flex-direction: row;
+  background-color: rgb(244, 243, 243);
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 10px 14px;
+  margin: 8px;
+}
+main #main-pratique section:nth-of-type(3) ul {
+  display: flex;
+  flex-direction: column;
+}
+main #main-pratique section:nth-of-type(3) ul li {
+  margin-bottom: 20px;
+}
+main #main-pratique section:nth-of-type(3) ul li a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+main #main-pratique section:nth-of-type(3) ul li img {
+  height: 32px;
+  width: 32px;
+}
+main #main-actualites {
+  position: relative;
+}
+main #main-actualites h2 {
+  position: absolute;
+  color: #fff;
+  left: 10em;
+  z-index: -1;
+}
+main #main-actualites #first-new {
+  display: grid;
+  height: 800px;
+  grid-template: 20em 2em 15em 1fr/1fr 1fr 7fr 1fr 1fr;
+}
+main #main-actualites #first-new img {
+  max-width: 100%;
+  grid-area: 1/2/3/5;
+}
+main #main-actualites #first-new > div {
+  background-color: #fff;
+  padding: 40px;
+  grid-area: 2/3/5/4;
+  z-index: 1;
+}
+main #main-actualites #first-new > div div {
+  margin-top: -3.5rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  background-color: #0082f8;
+  width: 85px;
+  padding: 9px 16px 10px 16px;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  transform: skewY(-5deg);
+}
+main #main-actualites #first-new > div h3 {
+  font-size: 42px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+main #main-actualites #first-new > div p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.73;
+}
+main #main-telex {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+main #main-telex h2 {
+  position: absolute;
+  color: #fff;
+  left: 10em;
+  z-index: -1;
+}
+main #main-telex svg.paris-icon {
+  height: 32px;
+  width: 32px;
+}
+main #main-telex li {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-bottom: 20px;
+  border-bottom: 0.1rem solid #e8e8e8;
+}
+main #main-telex li img {
+  width: 100%;
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+main #main-telex li .telex-time {
+  display: flex;
+  flex-direction: column;
+  font-size: 28px;
+  font-weight: 600;
+  margin-right: 20px;
+  fill: #e22c3f;
+}
+main #main-telex li .telex-content {
+  line-height: 1.54;
+  font-size: 13px;
+}
+main #main-telex li .telex-content p {
+  margin-bottom: 5px;
+}
+main #main-telex li:after {
+  background: #e22c3f;
+  bottom: 0;
+  content: "";
+  left: 0.95rem;
+  position: absolute;
+  top: 4.9rem;
+  width: 0.1rem;
+}
+
+footer {
+  grid-area: 3/1/4/4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+footer h2 {
+  position: absolute;
+  color: #fff;
+  left: 10em;
+  z-index: -1;
+}
+footer > section {
+  display: flex;
+  flex-direction: column;
+}
+footer #info-links {
+  flex-grow: 3;
+  justify-content: space-between;
+}
+footer #info-links svg {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+footer #info-links ul {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+footer #info-links ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+}
+footer #info-links nav a {
+  text-decoration: none;
+  color: #071f32;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+footer #info-links nav a:hover {
+  color: #e22c3f;
+}
+footer #socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #071f32;
+  font-size: 13px;
+  font-weight: 400;
+  flex-grow: 0.2;
+}
+footer #socials p {
+  color: #fff;
+}
+footer #socials > div {
+  margin: 20px 25px 0 25px;
+  height: 90px;
+}
+footer #socials > div #socials-icons {
+  display: flex;
+  flex-direction: row;
+}
+footer #socials > div:nth-of-type(1) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer #socials > div:nth-of-type(1) div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+}
+footer #socials > div:nth-of-type(1) div a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  width: 110px;
+  background-color: #e22c3f;
+}
+footer #socials > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+footer #socials > div:nth-of-type(3) {
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+footer #socials > div:nth-of-type(3) a {
+  background-color: #e22c3f;
+}
+footer #socials svg {
+  height: 3.2rem;
+  width: 3.2rem;
 }
 
 /*# sourceMappingURL=index.css.map */

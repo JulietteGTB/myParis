@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Paris.fr, site officiel de la Ville de Paris</title>
+  </head>
+  <body>
+    <header>
+      <div id="title">
+        <h1>Ville de Paris</h1>
+        <svg viewBox="0 0 167 45" role="img" focusable="false">
+          <path
+            d="M71.11 18.01c0-1.978-1.397-3.491-3.298-3.491h-4.074v6.984h4.074c1.9 0 3.298-1.514 3.298-3.492zm6.208 0c0 5.161-4.152 9.313-9.506 9.313h-4.074v8.536H57.53V8.699h10.282c5.354 0 9.506 4.151 9.506 9.312zm56.867 17.849V8.699h6.209v27.16h-6.209zM113.65 21.902h4.656c1.708 0 3.104-1.6 3.104-3.692s-1.396-3.691-3.104-3.691h-4.656v7.383zm0 5.433v8.524h-6.208V8.699h10.864a9.29 9.29 0 0 1 9.312 9.312c0 3.336-1.929 6.6-4.927 8.01l5.703 9.838h-6.673l-4.892-8.524h-3.179zm-26.463-1.474c1.026.263 2.102.402 3.21.402 1.11 0 2.186-.139 3.212-.402L90.398 15.8l-3.211 10.06zm-1.668 5.224l-1.525 4.774h-6.79l9.236-27.16h7.916l9.232 27.16h-6.79l-1.521-4.774c-1.56.4-3.195.611-4.88.611-1.684 0-3.319-.211-4.878-.611zm70.638-16.877c-1.67 0-2.91.769-2.91 2.057 0 1.728 1.689 2.448 5.91 3.697 5.428 1.606 7.708 3.915 7.708 8.098 0 5.29-4.283 8.342-10.087 8.342-7.392 0-10.46-5.583-10.865-6.713l5.283-2.769c1.179 2.093 3.133 3.434 5.582 3.434 2.193 0 3.88-.608 3.88-2.216 0-2.31-3.732-2.78-5.626-3.454-1.895-.673-7.993-1.85-7.993-8.264 0-5.343 4.524-8.265 9.118-8.265 6.536 0 9.074 4.429 9.932 6.13l-5.18 2.728c-.937-1.352-2.046-2.805-4.752-2.805zM47.75 26.281c.243.003.276.744-.487 2.796-3.315 8.906-11.097 15.208-22.558 15.208-13.814 0-23.347-9.76-24.704-21.668a.37.37 0 0 1 .46-.396l15.607 3.403c.04.104 2.588 7.577 9.904 7.577 7.367 0 12.15-7.526 12.15-15.81 0-8.278-5.164-11.76-6.741-12.981a31815.5 31815.5 0 0 0-13.127 6.565c7.091 4.342 8.372 12.053 6.59 17.35-.502 1.494-1.025 1.627-.932.83.618-5.33-1.6-14.729-14.683-17.758a.248.248 0 0 1-.049-.466L32.797 0c5.27 3.863 8.9 8.787 8.9 17.392 0 9.563-6.453 18.811-15.724 18.811-8.764 0-12.084-7.631-12.128-7.725L5.17 26.856c.106.38 4.112 14.366 21.11 14.24 8.539-.063 16.598-4.65 20.97-14.227.196-.428.334-.59.502-.588z"
+          ></path>
+          />
+        </svg>
+      </div>
+      <nav>
+        <!-- Menu de navigation -->
+        <ul>
+          <li><a href="">Services</a></li>
+          <li><a href="">Municipalité</a></li>
+          <li><a href="">Participez !</a></li>
+          <li><a href="">Que faire à Paris ?</a></li>
+          <li><a href="">Jeux 2024</a></li>
+        </ul>
+        <div id="recherche">
+          <a href="">Recherche</a>
+          <svg class="paris-icon paris-icon-search" role="img">
+            <use xlink:href="#paris-icon-search">
+              <symbol id="paris-icon-search" viewBox="0 0 32 32">
+                <path
+                  d="M20.2517783,18.9919966 L25.0362131,24.0664448 L22.8534353,26.1244732 L17.9712161,20.9463133 C16.8010506,21.6167419 15.4452827,22 14,22 C9.581722,22 6,18.418278 6,14 C6,9.581722 9.581722,6 14,6 C18.418278,6 22,9.581722 22,14 C22,15.8882102 21.3458363,17.6236322 20.2517783,18.9919966 L20.2517783,18.9919966 Z M14,19 C16.7614237,19 19,16.7614237 19,14 C19,11.2385763 16.7614237,9 14,9 C11.2385763,9 9,11.2385763 9,14 C9,16.7614237 11.2385763,19 14,19 Z"
+                ></path>
+              </symbol>
+            </use>
+          </svg>
+        </div>
+        <div id="mon-compte">
+          <a href="">Mon Paris</a>
+          <svg class="paris-icon paris-icon-user" role="img">
+            <use xlink:href="#paris-icon-user">
+              <symbol id="paris-icon-user" viewBox="0 0 32 32">
+                <path
+                  d="M18.875 12.066a6.613 6.613 0 0 1 3.326 5.727v7.02c0 .287-.114.563-.318.767-3.354 3.354-9.303 3.263-12.565 0A1.086 1.086 0 0 1 9 24.812v-7.02a6.61 6.61 0 0 1 3.14-5.615 5.183 5.183 0 1 1 6.735-.11zm-3.264 1.297l-.165.003c-2.363.082-4.275 2.045-4.275 4.427v6.546c2.382 2.04 6.421 2.095 8.86 0v-6.546c0-2.43-1.99-4.424-4.42-4.43zm-.041-2.171a3.012 3.012 0 1 0-.254-6.019 3.012 3.012 0 0 0 .254 6.019z"
+                ></path>
+              </symbol>
+            </use>
+          </svg>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="main-pratique">
+        <!-- <h2>Pratique</h2> -->
+        <h2>Accès rapides</h2>
+        <section class="pra-sub">
+          <!-- <h3>Lieux</h3> -->
+          <ul>
+            <li>
+              <a href="">
+                <img src="./img/image (14).svg" alt="" />
+                Piscines
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./img/image (14).svg" alt="" />
+                Parcs, Jardins et Bois
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./img/image (14).svg" alt="" />
+                Mairies d'arrondissement
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./img/image (14).svg" alt="" />
+                Bibliothèques
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="pra-sub">
+          <!-- <h3>Carte</h3> -->
+          <a href="" class="slide-1">Voir la carte</a>
+        </section>
+        <section class="pra-sub">
+          <!-- <h3>Services</h3> -->
+          <ul>
+            <li>
+              <a href="">
+                <img src="./img/id-card.svg" alt="" />
+                <p>Carte d'identité / Passeport</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./img/briefcase.svg" alt="" />
+                <p>Travailler à Paris</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./img/car.svg" alt="" />
+                <p>Stationnement résidentiel</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./img/bulky.svg" alt="" />
+                <p>Encombrants</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="" alt="" />
+                <p>Services en ligne</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="" alt="" />
+                <p>Facil'Familles</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="" alt="" />
+                <p>État civil</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="" alt="" />
+                <p>Signaler une anomalie avec DansMaRue</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="" alt="" />
+                <p>S'installer à Paris</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="" alt="" />
+                <p>Logement : prise de RDV en ligne</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="pra-sub">
+          <h3>Qualité de l'air</h3>
+          <a href="" class="slide-1">>Voir la carte</a>
+        </section>
+        <section class="pra-sub">
+          <h3>Vous êtes...</h3>
+          <ul>
+            <li>
+              <img src="" alt="" />
+              <p></p>
+              <a href="" class="slide-1">En Savoir +</a>
+            </li>
+            <li>
+              <img src="" alt="" />
+              <p></p>
+              <a href="" class="slide-1">En Savoir +</a>
+            </li>
+            <li>
+              <img src="" alt="" />
+              <p></p>
+              <a href="" class="slide-1">En Savoir +</a>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section id="main-actualites">
+        <h2>Actualités</h2>
+        <!-- ((article.big-new>img+div>div.is-tag-+h3)+(div>(article.small-new*2>div>div.is-tag-+h3)))*5 -->
+        <article id="first-new">
+          <img
+            src="./img/image_processing20230413-23123-xu6lcf.jpg"
+            alt=""
+          />
+          <div>
+            <div class="is-tag-jo24">À la Une</div>
+            <h3>
+              Paris renforce son accessibilité en vue des Jeux olympiques et
+              paralympiques
+            </h3>
+            <p>
+              Alors que près de 350 000 visiteurs en situation de handicap sont
+              attendus à Paris pour les Jeux olympiques et paralympiques, la
+              Ville renforce son accessibilité …
+            </p>
+          </div>
+        </article>
+        <div>
+          <article class="small-new">
+            <div>
+              <div class="is-tag-jo24"></div>
+              <h3></h3>
+            </div>
+          </article>
+          <article class="small-new">
+            <div>
+              <div class="is-tag-jo24"></div>
+              <h3></h3>
+            </div>
+          </article>
+        </div>
+        <article class="big-new">
+          <img src="" alt="" />
+          <div>
+            <div class="is-tag-"></div>
+            <h3></h3>
+          </div>
+        </article>
+        <div>
+          <article class="small-new">
+            <div>
+              <div class="is-tag-"></div>
+              <h3></h3>
+            </div>
+          </article>
+          <article class="small-new">
+            <div>
+              <div class="is-tag-"></div>
+              <h3></h3>
+            </div>
+          </article>
+        </div>
+        <article class="big-new">
+          <img src="" alt="" />
+          <div>
+            <div class="is-tag-"></div>
+            <h3></h3>
+          </div>
+        </article>
+        <!-- actualité, newsletter, social media -->
+        <div>
+          <article class="small-new">
+            <div>
+              <div class="is-tag-"></div>
+              <h3></h3>
+            </div>
+          </article>
+          <article class="small-new">
+            <div>
+              <div class="is-tag-"></div>
+              <h3></h3>
+            </div>
+          </article>
+        </div>
+        <article class="big-new">
+          <img src="" alt="" />
+          <div>
+            <div class="is-tag-"></div>
+            <h3></h3>
+          </div>
+        </article>
+        <div>
+          <article class="small-new">
+            <div>
+              <div class="is-tag-"></div>
+              <h3></h3>
+            </div>
+          </article>
+          <article class="small-new">
+            <div>
+              <div class="is-tag-"></div>
+              <h3></h3>
+            </div>
+          </article>
+        </div>
+        <article class="big-new">
+          <img src="" alt="" />
+          <div>
+            <div class="is-tag-"></div>
+            <h3></h3>
+          </div>
+        </article>
+        <div>
+          <article class="small-new">
+            <div>
+              <div class="is-tag-"></div>
+              <h3></h3>
+            </div>
+          </article>
+          <article class="small-new">
+            <div>
+              <div class="is-tag-"></div>
+              <h3></h3>
+            </div>
+          </article>
+        </div>
+        <!-- <footer>magazine</footer> -->
+      </section>
+      <section id="main-telex">
+        <h2>Telex</h2>
+        <!-- ul>li*15>(section.telex-time>(div.date>div.day+div.month{04}))+(section.telex-content>p+img) -->
+        <ul>
+          <li>
+            <section class="telex-time">
+              <div class="date">
+                <div class="day">15.</div>
+                <div class="month">04</div>
+                <svg class="paris-icon paris-icon-clock" role="img">
+                  <use xlink:href="#paris-icon-clock">
+                    <symbol id="paris-icon-clock" viewBox="0 0 32 32">
+                      <path
+                        d="M16 9c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.14-7-7 3.14-7 7-7zm0 12.444A5.45 5.45 0 0 0 21.444 16 5.45 5.45 0 0 0 16 10.556 5.45 5.45 0 0 0 10.556 16 5.45 5.45 0 0 0 16 21.444zm.778-9.333v3.473l1.987 1.324-.863 1.295-2.68-1.787v-4.305h1.556z"
+                      ></path>
+                    </symbol>
+                  </use>
+                </svg>
+              </div>
+            </section>
+            <section class="telex-content">
+              <p>
+                08h00 ·
+                <strong>Le saviez-vous ?</strong>
+                Le 15 avril 1980, Jean-Paul Sartre meurt à Paris, où il a résidé
+                toute sa vie. Écrivain et philosophe emblématique du courant
+                existentialiste, Sartre participe activement aux événements de
+                mai 1968. Il partagera jusqu'à sa mort la vie de
+                <a
+                  href="https://www.paris.fr/pages/sur-les-pas-de-simone-de-beauvoir-ecrivaine-et-feministe-emblematique-de-paris-21516"
+                  >Simone de Beauvoir</a
+                >, avec qui il formait un célèbre couple de la vie
+                intellectuelle parisienne.
+              </p>
+              <img
+                src="./img/image_processing20210329-15751-1ju22ov.jpg"
+                alt=""
+              />
+            </section>
+          </li>
+          <li>
+            <section class="telex-time">
+              <div class="date">
+                <div class="day">14.</div>
+                <div class="month">04</div>
+                <svg class="paris-icon paris-icon-clock" role="img">
+                  <use xlink:href="#paris-icon-clock">
+                    <symbol id="paris-icon-clock" viewBox="0 0 32 32">
+                      <path
+                        d="M16 9c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.14-7-7 3.14-7 7-7zm0 12.444A5.45 5.45 0 0 0 21.444 16 5.45 5.45 0 0 0 16 10.556 5.45 5.45 0 0 0 10.556 16 5.45 5.45 0 0 0 16 21.444zm.778-9.333v3.473l1.987 1.324-.863 1.295-2.68-1.787v-4.305h1.556z"
+                      ></path>
+                    </symbol>
+                  </use>
+                </svg>
+              </div>
+            </section>
+            <section class="telex-content">
+              <p>
+                16h00 · <strong>Claire Bretécher</strong>, autrice de
+                bande-dessinées et maman d'<em>Agrippine</em>, donne son nom à
+                la bibliothèque municipale Lancry. Inauguration samedi 15 avril.
+              </p>
+              <a href="" class="slide-1">En Savoir +</a>
+              <img
+                src="./img/image_processing20230321-31857-18881fm.jpg"
+                alt=""
+              />
+            </section>
+          </li>
+          <li>
+            <section class="telex-time">
+              <div class="date">
+                <div class="day">14.</div>
+                <div class="month">04</div>
+                <svg class="paris-icon paris-icon-clock" role="img">
+                  <use xlink:href="#paris-icon-clock">
+                    <symbol id="paris-icon-clock" viewBox="0 0 32 32">
+                      <path
+                        d="M16 9c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.14-7-7 3.14-7 7-7zm0 12.444A5.45 5.45 0 0 0 21.444 16 5.45 5.45 0 0 0 16 10.556 5.45 5.45 0 0 0 10.556 16 5.45 5.45 0 0 0 16 21.444zm.778-9.333v3.473l1.987 1.324-.863 1.295-2.68-1.787v-4.305h1.556z"
+                      ></path>
+                    </symbol>
+                  </use>
+                </svg>
+              </div>
+            </section>
+            <section class="telex-content">
+              <p>
+                12h05 · <strong>Emploi.</strong> La 28e édition du forum de
+                l'alternance se tiendra les 18 et 19 avril à la Cité des
+                sciences et de l'industrie (19e). Un rendez-vous incontournable
+                pour les jeunes à la recherche d'un contrat en alternance, du
+                CAP au bac+5.
+              </p>
+              <a href="" class="slide-1">En Savoir +</a>
+              <img
+                src="./img/image_processing20210323-8404-xamvex.jpg"
+                alt=""
+              />
+            </section>
+          </li>
+          <!-- <li>
+                    <section class="telex-time">
+                        <div class="date">
+                            <div class="day"></div>
+                            <div class="month">04</div>
+                        </div>
+                    </section>
+                    <section class="telex-content">
+                        <p></p>
+                        <img src="" alt="">
+                    </section>
+                </li>
+                <li>
+                    <section class="telex-time">
+                        <div class="date">
+                            <div class="day"></div>
+                            <div class="month">04</div>
+                        </div>
+                    </section>
+                    <section class="telex-content">
+                        <p></p>
+                        <img src="" alt="">
+                    </section>
+                </li>
+                <li>
+                    <section class="telex-time">
+                        <div class="date">
+                            <div class="day"></div>
+                            <div class="month">04</div>
+                        </div>
+                    </section>
+                    <section class="telex-content">
+                        <p></p>
+                        <img src="" alt="">
+                    </section>
+                </li>
+                <li>
+                    <section class="telex-time">
+                        <div class="date">
+                            <div class="day"></div>
+                            <div class="month">04</div>
+                        </div>
+                    </section>
+                    <section class="telex-content">
+                        <p></p>
+                        <img src="" alt="">
+                    </section>
+                </li>
+                <li>
+                    <section class="telex-time">
+                        <div class="date">
+                            <div class="day"></div>
+                            <div class="month">04</div>
+                        </div>
+                    </section>
+                    <section class="telex-content">
+                        <p></p>
+                        <img src="" alt="">
+                    </section>
+                </li>
+                <li>
+                    <section class="telex-time">
+                        <div class="date">
+                            <div class="day"></div>
+                            <div class="month">04</div>
+                        </div>
+                    </section>
+                    <section class="telex-content">
+                        <p></p>
+                        <img src="" alt="">
+                    </section>
+                </li>
+                <li>
+                    <section class="telex-time">
+                        <div class="date">
+                            <div class="day"></div>
+                            <div class="month">04</div>
+                        </div>
+                    </section>
+                    <section class="telex-content">
+                        <p></p>
+                        <img src="" alt="">
+                    </section>
+                </li>
+                <li>
+                    <section class="telex-time">
+                        <div class="date">
+                            <div class="day"></div>
+                            <div class="month">04</div>
+                        </div>
+                    </section>
+                    <section class="telex-content">
+                        <p></p>
+                        <img src="" alt="">
+                    </section>
+                </li>
+                <li>
+                    <section class="telex-time">
+                        <div class="date">
+                            <div class="day"></div>
+                            <div class="month">04</div>
+                        </div>
+                    </section>
+                    <section class="telex-content">
+                        <p></p>
+                        <img src="" alt="">
+                    </section>
+                </li>
+                <li>
+                    <section class="telex-time">
+                        <div class="date">
+                            <div class="day"></div>
+                            <div class="month">04</div>
+                        </div>
+                    </section>
+                    <section class="telex-content">
+                        <p></p>
+                        <img src="" alt="">
+                    </section>
+                </li>
+                <li>
+                    <section class="telex-time">
+                        <div class="date">
+                            <div class="day"></div>
+                            <div class="month">04</div>
+                        </div>
+                    </section>
+                    <section class="telex-content">
+                        <p></p>
+                        <img src="" alt="">
+                    </section>
+                </li>
+                <li>
+                    <section class="telex-time">
+                        <div class="date">
+                            <div class="day"></div>
+                            <div class="month">04</div>
+                        </div>
+                    </section>
+                    <section class="telex-content">
+                        <p></p>
+                        <img src="" alt="">
+                    </section>
+                </li> -->
+        </ul>
+      </section>
+    </main>
+    <footer>
+        <h2>Contact</h2>
+      <section id="info-links">
+        <header>
+          <svg viewBox="0 0 167 45" role="img" focusable="false">
+            <path
+              d="M71.11 18.01c0-1.978-1.397-3.491-3.298-3.491h-4.074v6.984h4.074c1.9 0 3.298-1.514 3.298-3.492zm6.208 0c0 5.161-4.152 9.313-9.506 9.313h-4.074v8.536H57.53V8.699h10.282c5.354 0 9.506 4.151 9.506 9.312zm56.867 17.849V8.699h6.209v27.16h-6.209zM113.65 21.902h4.656c1.708 0 3.104-1.6 3.104-3.692s-1.396-3.691-3.104-3.691h-4.656v7.383zm0 5.433v8.524h-6.208V8.699h10.864a9.29 9.29 0 0 1 9.312 9.312c0 3.336-1.929 6.6-4.927 8.01l5.703 9.838h-6.673l-4.892-8.524h-3.179zm-26.463-1.474c1.026.263 2.102.402 3.21.402 1.11 0 2.186-.139 3.212-.402L90.398 15.8l-3.211 10.06zm-1.668 5.224l-1.525 4.774h-6.79l9.236-27.16h7.916l9.232 27.16h-6.79l-1.521-4.774c-1.56.4-3.195.611-4.88.611-1.684 0-3.319-.211-4.878-.611zm70.638-16.877c-1.67 0-2.91.769-2.91 2.057 0 1.728 1.689 2.448 5.91 3.697 5.428 1.606 7.708 3.915 7.708 8.098 0 5.29-4.283 8.342-10.087 8.342-7.392 0-10.46-5.583-10.865-6.713l5.283-2.769c1.179 2.093 3.133 3.434 5.582 3.434 2.193 0 3.88-.608 3.88-2.216 0-2.31-3.732-2.78-5.626-3.454-1.895-.673-7.993-1.85-7.993-8.264 0-5.343 4.524-8.265 9.118-8.265 6.536 0 9.074 4.429 9.932 6.13l-5.18 2.728c-.937-1.352-2.046-2.805-4.752-2.805zM47.75 26.281c.243.003.276.744-.487 2.796-3.315 8.906-11.097 15.208-22.558 15.208-13.814 0-23.347-9.76-24.704-21.668a.37.37 0 0 1 .46-.396l15.607 3.403c.04.104 2.588 7.577 9.904 7.577 7.367 0 12.15-7.526 12.15-15.81 0-8.278-5.164-11.76-6.741-12.981a31815.5 31815.5 0 0 0-13.127 6.565c7.091 4.342 8.372 12.053 6.59 17.35-.502 1.494-1.025 1.627-.932.83.618-5.33-1.6-14.729-14.683-17.758a.248.248 0 0 1-.049-.466L32.797 0c5.27 3.863 8.9 8.787 8.9 17.392 0 9.563-6.453 18.811-15.724 18.811-8.764 0-12.084-7.631-12.128-7.725L5.17 26.856c.106.38 4.112 14.366 21.11 14.24 8.539-.063 16.598-4.65 20.97-14.227.196-.428.334-.59.502-.588z"
+            ></path>
+            />
+          </svg>
+          <select name="mairies" id="mairies">
+            <option value="">Les Mairies</option>
+            <option value="">Mairie de Paris Centre</option>
+            <option value="">Mairie du 5ᵉ arrondissement</option>
+            <option value="">Mairie du 6ᵉ arrondissement</option>
+            <option value="">Mairie du 7ᵉ arrondissement</option>
+            <option value="">Mairie du 8ᵉ arrondissement</option>
+            <option value="">Mairie du 9ᵉ arrondissement</option>
+            <option value="">Mairie du 10ᵉ arrondissement</option>
+            <option value="">Mairie du 11ᵉ arrondissement</option>
+            <option value="">Mairie du 12ᵉ arrondissement</option>
+            <option value="">Mairie du 13ᵉ arrondissement</option>
+            <option value="">Mairie du 14ᵉ arrondissement</option>
+            <option value="">Mairie du 15ᵉ arrondissement</option>
+            <option value="">Mairie du 16ᵉ arrondissement</option>
+            <option value="">Mairie du 17ᵉ arrondissement</option>
+            <option value="">Mairie du 18ᵉ arrondissement</option>
+            <option value="">Mairie du 19ᵉ arrondissement</option>
+            <option value="">Mairie du 20ᵉ arrondissement</option>
+          </select>
+        </header>
+        <section>
+          <ul>
+            <li>
+              <p>Visit Paris</p>
+              <a href="" class="slide-1">Tourist Office</a>
+            </li>
+            <li>
+              <p>Open Data</p>
+              <a href="" class="slide-1">En Savoir +</a>
+            </li>
+            <li>
+              <p>Démarches</p>
+              <a href="" class="slide-1">Services en Ligne</a>
+            </li>
+          </ul>
+        </section>
+        <nav>
+          <ul>
+            <li>
+              <a href="">Contact</a>
+            </li>
+            <li>
+              <a href="">Presse</a>
+            </li>
+            <li>
+              <a href="">Mentions Légales</a>
+            </li>
+            <li>
+              <a href="">Accessibilité</a>
+            </li>
+            <li>
+              <a href="">Politique de Cookies</a>
+            </li>
+            <li>
+              <a href="">Plan du site</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <section id="socials">
+        <div>
+          <p>Recevez chaque semaine l'actualité de votre ville</p>
+          <div class="newsletter">
+            <input type="email" placeholder="Votre email"/>
+            <a href="" class="%white-pink">S'abonner</a>
+          </div>
+        </div>
+        <div>
+          <p>Suivez nous sur les réseaux sociaux</p>
+          <ul id="socials-icons">
+            <li>
+              <a href="">
+                <svg></svg>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg></svg>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg></svg>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg></svg>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <p>Une question ? Contactez nous sur</p>
+          <a href="" class="%white-pink try">@Parisjecoute</a>
+        </div>
+      </section>
+    </footer>
+
+    <!-- SVG paths and infos from official website -->
+    <svg class="paris-icon-sprite" style="display: none">
+      <defs>
+        <symbol id="paris-icon-loader" viewBox="0 0 8 8">
+          <path
+            d="M4,0C1.8,0,0,1.8,0,4s1.8,4,4,4c0,0,0-0.3,0-1C2.3,7,1,5.7,1,4s1.3-3,3-3C4,0.5,4,0.6,4,0L4,0z"
+          >
+            <animateTransform
+              attributeName="transform"
+              type="rotate"
+              from="0 4 4"
+              to="360 4 4"
+              dur="0.6s"
+              repeatCount="indefinite"
+            />
+          </path>
+        </symbol>
+        <symbol id="paris-icon-check" viewBox="0 0 14 14">
+          <path
+            d="M 11.52 1.76 L 5.02 8.25 L 2.51 5.67 L 0.5 7.62 L 4.99 12.24 L 13.5 3.74 Z"
+          />
+        </symbol>
+        <symbol id="paris-icon-facebook" viewBox="0 0 32 32">
+          <path
+            d="M16.546 24H8.883A.883.883 0 0 1 8 23.117V8.883C8 8.395 8.395 8 8.883 8h14.234c.488 0 .883.395.883.883v14.234a.883.883 0 0 1-.883.883H19.04v-6.196h2.08l.31-2.415h-2.39v-1.541c0-.7.194-1.176 1.196-1.176h1.28v-2.16c-.222-.03-.981-.095-1.864-.095-1.844 0-3.106 1.125-3.106 3.191v1.781h-2.085v2.415h2.085V24z"
+          />
+        </symbol>
+        <symbol id="paris-icon-twitter" viewBox="0 0 32 32">
+          <path
+            d="M25 10.776a7.213 7.213 0 0 1-2.12.596 3.778 3.778 0 0 0 1.623-2.095 7.273 7.273 0 0 1-2.346.918A3.642 3.642 0 0 0 19.462 9c-2.038 0-3.692 1.696-3.692 3.787 0 .296.032.585.095.862-3.069-.158-5.79-1.664-7.612-3.958a3.856 3.856 0 0 0-.5 1.906c0 1.313.652 2.472 1.643 3.152a3.626 3.626 0 0 1-1.673-.473v.047c0 1.835 1.273 3.366 2.963 3.713-.31.089-.636.133-.973.133-.238 0-.47-.023-.695-.067.47 1.504 1.833 2.599 3.45 2.628A7.292 7.292 0 0 1 7 22.3a10.282 10.282 0 0 0 5.66 1.7c6.794 0 10.508-5.77 10.508-10.774 0-.164-.003-.329-.01-.49A7.58 7.58 0 0 0 25 10.776"
+          />
+        </symbol>
+        <symbol id="paris-icon-instagram" viewBox="0 0 32 32">
+          <path
+            d="M16 7c-2.444 0-2.75.01-3.71.054-.959.044-1.613.196-2.185.419A4.411 4.411 0 0 0 8.51 8.51c-.5.5-.809 1.002-1.038 1.594-.223.572-.375 1.226-.419 2.184C7.01 13.25 7 13.556 7 16s.01 2.75.054 3.71c.044.959.196 1.613.419 2.185.23.592.537 1.094 1.038 1.594.5.5 1.002.809 1.594 1.039.572.222 1.226.374 2.184.418.96.044 1.267.054 3.711.054s2.75-.01 3.71-.054c.959-.044 1.613-.196 2.185-.418a4.412 4.412 0 0 0 1.594-1.039c.5-.5.809-1.002 1.039-1.594.222-.572.374-1.226.418-2.184.044-.96.054-1.267.054-3.711s-.01-2.75-.054-3.71c-.044-.959-.196-1.613-.418-2.185a4.412 4.412 0 0 0-1.039-1.594c-.5-.5-1.002-.809-1.594-1.038-.572-.223-1.226-.375-2.184-.419C18.75 7.01 18.444 7 16 7zm0 1.622c2.403 0 2.688.009 3.637.052.877.04 1.354.187 1.67.31.421.163.72.358 1.036.673.315.315.51.615.673 1.035.123.317.27.794.31 1.671.043.95.052 1.234.052 3.637s-.009 2.688-.052 3.637c-.04.877-.187 1.354-.31 1.67-.163.421-.358.72-.673 1.036-.315.315-.615.51-1.035.673-.317.123-.794.27-1.671.31-.95.043-1.234.052-3.637.052s-2.688-.009-3.637-.052c-.877-.04-1.354-.187-1.67-.31a2.788 2.788 0 0 1-1.036-.673 2.789 2.789 0 0 1-.673-1.035c-.123-.317-.27-.794-.31-1.671-.043-.95-.052-1.234-.052-3.637s.009-2.688.052-3.637c.04-.877.187-1.354.31-1.67.163-.421.358-.72.673-1.036.315-.315.615-.51 1.035-.673.317-.123.794-.27 1.671-.31.95-.043 1.234-.052 3.637-.052zm0 2.756a4.622 4.622 0 1 0 0 9.244 4.622 4.622 0 0 0 0-9.244zM16 19a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm5.884-7.804a1.08 1.08 0 1 1-2.16 0 1.08 1.08 0 0 1 2.16 0z"
+          />
+        </symbol>
+        <symbol id="paris-icon-linkedin" viewBox="0 0 32 32">
+          <path
+            d="M26 23h-3.757v-5.273c0-1.38-.588-2.323-1.88-2.323-.989 0-1.539.636-1.795 1.25-.095.219-.08.525-.08.832V23h-3.723s.048-9.34 0-10.19h3.723v1.6c.22-.7 1.409-1.698 3.307-1.698 2.355 0 4.205 1.466 4.205 4.622V23zM11.001 11.536h-.024c-1.2 0-1.977-.78-1.977-1.767C9 8.763 9.8 8 11.024 8c1.222 0 1.974.76 1.998 1.766 0 .988-.776 1.77-2.02 1.77zM9.43 12.81h3.313V23H9.43V12.81z"
+          />
+        </symbol>
+        <symbol id="paris-icon-youtube" viewBox="-21 -117 682.67 682">
+          <path
+            d="M626.81 64.04a80.18 80.18 0 00-56.4-56.42c-50.09-13.7-250.42-13.7-250.42-13.7S119.67-6.08 69.6 7.1c-26.9 7.38-49.04 29.52-56.41 56.94C0 114.1 0 217.97 0 217.97S0 322.35 13.18 371.9a80.2 80.2 0 0056.41 56.41C120.19 442.02 320 442.02 320 442.02s200.32 0 250.4-13.18a80.18 80.18 0 0056.42-56.41C640 322.35 640 218.5 640 218.5s.52-104.39-13.19-154.46zM256.21 313.9V122.02l166.59 95.95zm0 0"
+          />
+        </symbol>
+        <symbol id="paris-icon-download" viewBox="0 0 32 32">
+          <path
+            d="M17.004 17.662l3.067-3.067 1.414 1.415-5.475 5.475-5.476-5.475 1.414-1.415 3.056 3.057V8.027h2v9.635zM11 23h10v2H11v-2z"
+          />
+        </symbol>
+        <symbol id="paris-icon-clock" viewBox="0 0 32 32">
+          <path
+            d="M16 9c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.14-7-7 3.14-7 7-7zm0 12.444A5.45 5.45 0 0 0 21.444 16 5.45 5.45 0 0 0 16 10.556 5.45 5.45 0 0 0 10.556 16 5.45 5.45 0 0 0 16 21.444zm.778-9.333v3.473l1.987 1.324-.863 1.295-2.68-1.787v-4.305h1.556z"
+          />
+        </symbol>
+        <symbol id="paris-icon-search" viewBox="0 0 32 32">
+          <path
+            d="M20.2517783,18.9919966 L25.0362131,24.0664448 L22.8534353,26.1244732 L17.9712161,20.9463133 C16.8010506,21.6167419 15.4452827,22 14,22 C9.581722,22 6,18.418278 6,14 C6,9.581722 9.581722,6 14,6 C18.418278,6 22,9.581722 22,14 C22,15.8882102 21.3458363,17.6236322 20.2517783,18.9919966 L20.2517783,18.9919966 Z M14,19 C16.7614237,19 19,16.7614237 19,14 C19,11.2385763 16.7614237,9 14,9 C11.2385763,9 9,11.2385763 9,14 C9,16.7614237 11.2385763,19 14,19 Z"
+          ></path>
+        </symbol>
+        <symbol id="paris-icon-arrow-right" viewBox="0 0 32 32">
+          <path
+            d="M16.464 15.707l-4.585-4.586 2.828-2.828 7.414 7.414-7.414 7.414-2.828-2.828z"
+          />
+        </symbol>
+        <symbol id="paris-icon-arrow-top" viewBox="0 0 32 32">
+          <polygon
+            points="16 16.2426407 11.4142136 20.8284271 8.58578644 18 16 10.5857864 23.4142136 18 20.5857864 20.8284271"
+          ></polygon>
+        </symbol>
+        <symbol id="paris-icon-user" viewBox="0 0 32 32">
+          <path
+            d="M18.875 12.066a6.613 6.613 0 0 1 3.326 5.727v7.02c0 .287-.114.563-.318.767-3.354 3.354-9.303 3.263-12.565 0A1.086 1.086 0 0 1 9 24.812v-7.02a6.61 6.61 0 0 1 3.14-5.615 5.183 5.183 0 1 1 6.735-.11zm-3.264 1.297l-.165.003c-2.363.082-4.275 2.045-4.275 4.427v6.546c2.382 2.04 6.421 2.095 8.86 0v-6.546c0-2.43-1.99-4.424-4.42-4.43zm-.041-2.171a3.012 3.012 0 1 0-.254-6.019 3.012 3.012 0 0 0 .254 6.019z"
+          />
+        </symbol>
+        <symbol id="paris-icon-location" viewBox="0 0 32 32">
+          <path
+            d="M16,26.667 C13.641,23.52 9,16.936 9,13 C9,9.14 12.14,6 16,6 C19.86,6 23,9.14 23,13 C23,16.936 18.359,23.521 16,26.667 Z M16,11 C14.898,11 14,11.898 14,13 C14,14.104 14.898,15 16,15 C17.102,15 18,14.104 18,13 C18,11.898 17.102,11 16,11 Z"
+          ></path>
+        </symbol>
+        <symbol id="paris-icon-search" viewBox="0 0 32 32">
+          <path
+            d="M20.2517783,18.9919966 L25.0362131,24.0664448 L22.8534353,26.1244732 L17.9712161,20.9463133 C16.8010506,21.6167419 15.4452827,22 14,22 C9.581722,22 6,18.418278 6,14 C6,9.581722 9.581722,6 14,6 C18.418278,6 22,9.581722 22,14 C22,15.8882102 21.3458363,17.6236322 20.2517783,18.9919966 L20.2517783,18.9919966 Z M14,19 C16.7614237,19 19,16.7614237 19,14 C19,11.2385763 16.7614237,9 14,9 C11.2385763,9 9,11.2385763 9,14 C9,16.7614237 11.2385763,19 14,19 Z"
+          ></path>
+        </symbol>
+        <symbol id="paris-icon-close" viewBox="0 0 32 32">
+          <path
+            d="M16 13.379l6.718-6.718 2.12 2.121-6.717 6.718 6.718 6.718-2.121 2.12L16 17.622 9.282 24.34l-2.12-2.121 6.717-6.718L7.16 8.782l2.121-2.12z"
+          />
+        </symbol>
+        <symbol
+          id="paris-icon-arrow-left-up"
+          viewBox="0 0 16 16"
+          style="enable-background: new 0 0 16 16"
+          xml:space="preserve"
+        >
+          <path
+            d="m2.215 11.619-.9-9.1c-.1-.5.3-1 .8-1h.2l9.1.9c.5 0 .9.5.9 1.1 0 .5-.5.9-1.1.9l-6.4-.6 9.4 9.4c.4.4.3 1-.1 1.4-.4.3-1 .3-1.3 0l-9.4-9.4.6 6.4c0 .5-.3 1-.9 1h-.1c-.3-.1-.7-.5-.8-1z"
+          />
+        </symbol>
+        <symbol id="paris-icon-clock2" viewBox="0 0 16 16">
+          <path
+            d="M8.8,7.6l2,1.3-.9,1.3L7.2,8.4V4.1H8.8ZM15,8a7,7,0,0,1-7,7A7,7,0,0,1,1,8,7,7,0,0,1,8,1,7,7,0,0,1,15,8ZM13.4,8A5.4,5.4,0,1,0,8,13.4,5.4,5.4,0,0,0,13.4,8Z"
+          />
+        </symbol>
+        <symbol
+          id="paris-icon-arrow-left-up"
+          viewBox="0 0 16 16"
+          style="enable-background: new 0 0 16 16"
+          xml:space="preserve"
+        >
+          <path
+            d="m2.215 11.619-.9-9.1c-.1-.5.3-1 .8-1h.2l9.1.9c.5 0 .9.5.9 1.1 0 .5-.5.9-1.1.9l-6.4-.6 9.4 9.4c.4.4.3 1-.1 1.4-.4.3-1 .3-1.3 0l-9.4-9.4.6 6.4c0 .5-.3 1-.9 1h-.1c-.3-.1-.7-.5-.8-1z"
+          />
+        </symbol>
+        <symbol id="paris-icon-external" viewBox="0 0 32 32">
+          <path
+            d="M22.224 22.224H9.776V9.776h4.376V8H9.776A1.768 1.768 0 008 9.776v12.448A1.768 1.768 0 009.776 24h12.448A1.784 1.784 0 0024 22.224v-4.376h-1.776zM17.776 8v1.776h3.2l-5.04 5.04 1.256 1.256 5.04-5.04v3.2H24V8z"
+          />
+        </symbol>
+        <symbol id="paris-icon-search--calendar" viewBox="0 0 13.761 13.878">
+          <path
+            d="M11.175 1.11H10.3V.57A.57.57 0 0 0 9.73 0a.561.561 0 0 0-.57.57v.54H4.6V.57A.57.57 0 0 0 4.03 0a.561.561 0 0 0-.57.57v.54h-.874A2.581 2.581 0 0 0 0 3.7v7.6a2.59 2.59 0 0 0 2.586 2.586h8.59a2.581 2.581 0 0 0 2.586-2.586V3.7a2.59 2.59 0 0 0-2.587-2.59zM2.586 2.235h.876v.541a.57.57 0 0 0 .57.57.561.561 0 0 0 .57-.57v-.541H9.16v.541a.57.57 0 0 0 .57.57.561.561 0 0 0 .57-.57v-.541h.876A1.453 1.453 0 0 1 12.622 3.7v.745H1.139V3.7a1.453 1.453 0 0 1 1.447-1.465zm8.59 10.5h-8.59a1.465 1.465 0 0 1-1.461-1.461V5.566h11.5v5.712a1.443 1.443 0 0 1-1.45 1.46z"
+          />
+        </symbol>
+        <symbol id="paris-icon-search--minimarker" viewBox="0 0 12.237 14.608">
+          <path
+            d="M6.12 0A5.914 5.914 0 0 0 0 5.682c0 4.419 6.12 8.925 6.12 8.925s6.118-4.506 6.118-8.925A5.914 5.914 0 0 0 6.12 0zm.042 3.621a2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5 2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5z"
+          />
+        </symbol>
+        <symbol id="paris-icon-search--audience" viewBox="0 0 13.273 14.634">
+          <path
+            d="M6.637 0a4.576 4.576 0 1 0 4.576 4.576A4.565 4.565 0 0 0 6.637 0zm0 7.77a3.195 3.195 0 1 1 3.195-3.195A3.184 3.184 0 0 1 6.637 7.77z"
+          />
+          <path
+            d="M6.637 7.997A6.632 6.632 0 0 0 0 14.634h1.175a5.462 5.462 0 1 1 10.924 0h1.175a6.632 6.632 0 0 0-6.637-6.637z"
+          />
+        </symbol>
+        <symbol id="paris-icon-arrow-bottom" viewBox="0 0 32 32">
+          <path
+            d="M16 16.172l4.586-4.586 2.828 2.828L16 21.828l-7.414-7.414 2.828-2.828z"
+          />
+        </symbol>
+      </defs>
+    </svg>
+  </body>
+</html>

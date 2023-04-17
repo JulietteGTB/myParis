@@ -1,0 +1,76 @@
+header {
+    display: flex;
+    grid-area: 1/1/2/4;
+    flex-direction: row;
+    height: 77px;
+    width: 100%;
+    border-bottom: 0.1rem solid #e8e8e8;
+    position: relative;
+    h1 {
+      position: absolute;
+      z-index: -1;
+      left: 5em;
+      color: #fff;
+    }
+    #title {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      fill: #071f32;
+      min-width: 12rem;
+      padding: 9px;
+    }
+    nav {
+      display: flex;
+      flex-direction: row;
+      flex-grow: 3;
+      svg.paris-icon {
+        height: 32px;
+        width: 32px;
+      }
+  
+      #recherche {
+        svg {
+          order: -1;
+        }
+      }
+  
+      #mon-compte {
+        a {
+          color: #354bcf;
+        }
+        svg.paris-icon-user {
+          fill: #354bcf;
+        }
+      }
+      div {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a {
+          text-decoration: none;
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+      ul {
+        flex-grow: 3;
+        display: flex;
+        flex-direction: row;
+        li {
+          display: flex;
+          height: 100%;
+          flex-grow: 1;
+          align-items: center;
+          justify-content: center;
+          a {
+            display: flex;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }

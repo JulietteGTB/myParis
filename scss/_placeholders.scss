@@ -15,17 +15,49 @@
         z-index: -1;
         top: 0;
         left: 0;
-        right: 100%; /* this is the direction the swipe goes */
+        right: 100%; 
         bottom: 0;
         background-color: #e22c3f;
-        transition: right 0.25s ease-in-out; /* a shorter animation time on exit, adjust as you wish */
+        transition: right 0.25s ease-in-out; 
       }
     &.slide-1:hover {
         color: white;
         transition: color 0.5s ease-in-out;
     }
     &.slide-1:hover::after {
-        right: 0; /* this is the direction the swipe goes */
-        transition: right 0.5s ease-in-out; /* this triggers the animation */
+        right: 0; 
+        transition: right 0.5s ease-in-out; 
+      }  
+}
+
+%white-pink {
+    position: relative;
+    z-index:1;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.25s ease-in-out;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    &.slide-1::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 100%; 
+        bottom: 0;
+        background-color: #fff;
+        transition: right 0.25s ease-in-out; 
+      }
+    &.slide-1:hover {
+        color: #e22c3f;
+        transition: color 0.5s ease-in-out;
+    }
+    &.slide-1:hover::after {
+
+        transition: right 0.5s ease-in-out; 
       }  
 }
